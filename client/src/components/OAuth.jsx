@@ -43,7 +43,6 @@ export default function OAuth() {
             console.log('Could not sign in with Google', error);
         }
     };
-
     return (
         <button onClick={handleGoogleclick} type='button' className='bg-red-700 text-white p-3 rounded-lg uppercase hover:opacity-95'>
             Continue with Google
