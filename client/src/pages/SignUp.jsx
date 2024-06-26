@@ -13,7 +13,7 @@ export default function SignUp() {
         ...formData,
         [e.target.id]: e.target.value,
       });
-    };
+  };
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
@@ -28,7 +28,7 @@ export default function SignUp() {
         }
       );
       const data = await res.json();
-      console.log(formData);
+      console.log(Data);
       if (data.success === false) {
         setLoading(false);
         setError(data.message);
@@ -51,12 +51,12 @@ export default function SignUp() {
         <input type="password" placeholder='password' className='border p-3 rounded-lg' id='password' onChange={handleChange} />
         <button disabled={loading} className='bg-slate-700 text-white p-3 rounded-lg uppercase hover:opacity-95 disabled:opacity-80'>{loading ? 'Loading ...' : 'Sign Up'}
         </button>
-        <OAuth/>
+        <OAuth />
       </form>
-      <div className='flex gap-2 mt-5'>
+      <div className="flex gap-2 mt-5">
         <p>Have an account ?</p>
         <Link to={"/sign-in"}>
-          <span className='text-blue-7--'>Sign in</span>
+          <span className='text-blue-700'>Sign in</span>
         </Link>
       </div>
       {error && <p className='text-red-500 mt-5'>{error}</p>}
