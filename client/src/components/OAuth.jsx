@@ -1,7 +1,7 @@
 import React from 'react'
 
 export default function OAuth() {
-  return (
-    <div>OAuth</div>
-  )
+    return (
+        <button className='bg-red-700 text-white p-3'>OAuth</button>
+    )
 }
